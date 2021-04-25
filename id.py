@@ -1,10 +1,8 @@
 import amino 
-email = input("Почта:")
-password = input("Пароль:")
-client = amino.Client()
+client=amino.Client()
 client.login(email=email, password=password)
 while True:
-    link = input('адресная ссылка объекта: ');
+    link = input('ану быстра ввел че те нада узнать: ');
     info = client.get_from_code(link)
     info = info.json["extensions"]["linkInfo"];
     comid  = info["ndcId"];
